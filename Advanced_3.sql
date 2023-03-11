@@ -24,10 +24,10 @@ group by album_title
 
 select artist_name from artist a
 where artist_name not in (
-	select artist_name from artist a
-	join artist_album aa on a.artist_id = aa.artist_id
-	join album al on aa.album_id = al.album_id
-	where album_year = 2020
+select artist_name from artist a
+join artist_album aa on a.artist_id = aa.artist_id
+join album al on aa.album_id = al.album_id
+where album_year = 2020
 )
 
 
